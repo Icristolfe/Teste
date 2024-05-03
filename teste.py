@@ -122,7 +122,7 @@ def diagonal_diff(arr):
     for i in range(n):
         sum_secondary += arr[i][n - 1 - i]
 
-    
+
     diff = abs(sum_primary - sum_secondary)
 
     return diff
