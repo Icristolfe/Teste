@@ -142,10 +142,19 @@ def diagonal_diff(arr):
 # Exemplo de saida: [0.400000, 0.400000, 0.200000]
 #
 def perc_elements(arr):
+    total_elementos = len(arr)
+    positivos = sum(1 for num in arr if num > 0)
+    negativos = sum(1 for num in arr if num < 0)
+    zeros = sum(1 for num in arr if num == 0)
 
-    # Escreve seu cÃ³digo abaixo
+    proporcao_positivos = positivos / total_elementos
+    proporcao_negativos = negativos / total_elementos
+    proporcao_zeros = zeros / total_elementos
 
-    return []
+    return [round(proporcao_positivos, 6), round(proporcao_negativos, 6), round(proporcao_zeros, 6)]
+
+
+
 
 
 if __name__ == '__main__':
